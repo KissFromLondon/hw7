@@ -71,7 +71,7 @@ img {
 }
 
 .list-link {
-  --s: 20px;
+  --s: 10px;
   text-decoration: none;
   color: #222222;
   text-transform: uppercase;
@@ -256,6 +256,7 @@ textarea {
   font-family: "Montserrat", sans-serif;
   color: rgb(255, 255, 255);
   font-weight: bold;
+  cursor: pointer;
 }
 
 input[type="email"]:focus:invalid,
