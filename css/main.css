@@ -1,0 +1,273 @@
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+}
+
+:root {
+  --row: 290px;
+  --gap: 35px;
+  --col: calc(var(--row) + var(--gap));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+div {
+  display: block;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-style: none;
+}
+
+/*----------------------header---------------------*/
+.header {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+.list-item {
+  text-align: center;
+  margin: 0 1.25rem;
+  cursor: pointer;
+}
+
+.list-link {
+  --s: 20px;
+  text-decoration: none;
+  color: #222222;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: var(--s);
+  margin-left: var(--s);
+}
+
+.list-item:hover .list-link,
+.list-item:focus .list-link {
+  color: #fed136;
+}
+
+.logo {
+  width: 80px;
+}
+/*---------------------main-------------------*/
+.titles {
+  padding-top: 73px;
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-family: "Noto Serif", serif;
+  color: rgb(119, 119, 119);
+  font-style: italic;
+  padding-bottom: 50px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 102px;
+}
+
+.service {
+  padding-top: 27px;
+  width: var(--col);
+  height: 232px;
+}
+
+.icon-wrp {
+  --s: 72px;
+  border: 3px solid #fed136;
+  border-radius: 50%;
+  height: var(--s);
+  width: var(--s);
+  position: relative;
+  margin: 0 auto;
+}
+
+.icon {
+  width: auto;
+  height: auto;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(
+    -50%
+  ); /* правильно ли я отцентрировала icon внутри icon-wrap? */
+}
+
+.service-text {
+  padding-top: 27px;
+  text-align: center;
+}
+
+.service-title {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.service-description {
+  width: var(--row);
+  font-size: 14px;
+  font-family: "RobotoSlab", serif;
+  color: rgb(119, 119, 119);
+}
+/*-------------------footer----------------------*/
+.footer {
+  background-color: #222222;
+  padding-bottom: 115px;
+}
+
+.footer-img-wrp {
+  position: relative;
+}
+
+.footer-img {
+  position: absolute; /* можно ли так разместить картинку?*/
+  height: 553px;
+  width: 607px;
+  overflow: hidden;
+  left: 60%;
+  top: 130px;
+}
+
+.contact-text {
+  padding-top: 111px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.contact-description {
+  font-size: 16px;
+  font-family: "Noto Serif", serif;
+  color: rgb(119, 119, 119);
+  font-style: italic;
+  padding-bottom: 80px;
+}
+
+input {
+  width: 455px;
+  margin-bottom: 30px;
+  height: 50px;
+  padding-left: 20px;
+  border: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(187, 187, 187);
+}
+
+.row1 {
+  float: left;
+  height: 212px;
+  width: 455px;
+  margin-bottom: 30px;
+}
+
+.row2 {
+  float: right;
+  height: 212px;
+  margin-bottom: 30px;
+}
+
+textarea {
+  --s: 20px;
+  height: 212px;
+  width: 455px;
+  border: none;
+  padding-top: var(--s);
+  padding-left: var(--s);
+}
+
+.submit {
+  height: 65px;
+  width: 240px;
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+  background-color: #fed136;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+input[type="email"]:focus:invalid,
+textarea[name="textarea"]:focus:invalid,
+input[name="name"]:focus:invalid {
+  outline-color: red;
+  transition: outline-color 5s;
+}
+
+input[type="email"]:focus:valid,
+textarea[name="textarea"]:focus:valid,
+input[name="name"]:focus:valid {
+  outline-color: green;
+  transition: outline-color 0.4s;
+}
